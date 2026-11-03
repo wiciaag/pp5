@@ -2,19 +2,133 @@
 //
 
 #include <iostream>
-
+#include<ctime>
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+/*zadanie1
+	int tab[10];
+	for (int i = 0; i < 10; i++) {
+		int n;
+		cout << "Podaj liczbe: ";
+		cin >> n;
+		tab[i] = n;
+	}
+	for (int i = 9; i >=0; i--) {
+		cout << tab[i] << " ";
+	}*/
+/*zadanie2
+	int n;
+	cout << "podaj liczbe: ";
+	cin >> n;
+	int* tab = new int[n];
+	tab[0] = 0;
+	tab[1] = 1;
+	for (int i=2; i <= (n - 1); i++) {
+		tab[i] = tab[i - 1] + tab[i - 2];
+	}
+	for (int i = 0; i < n; i++) {
+		cout << tab[i] << " ";
+	}*/
+/*zadanie3
+	int tab[10];
+	int srednia=0;
+	int mniejsza = 0;
+	int min = 0;
+	int max = 0;
+	srand(time(NULL));
+	for (int i = 0; i < 10; i++) {
+		tab[i] = rand();
+		srednia = srednia + tab[i];
+	}
+	srednia = srednia / 10;
+	for (int i = 0; i < 10; i++) {
+		if (tab[i] < srednia) {
+			mniejsza++;
+		}
+	}
+	min = tab[0];
+	max = tab[0];
+	for (int i = 1;i< 10; i++) {
+		if (tab[i] < min) {
+			min = tab[i];
+		}
+		if (tab[i] > max) {
+			max = tab[i];
+		}
+	}
+	cout << "Srednia: " << srednia << " ilosc liczb mniejszych od sredniej: " << mniejsza;
+	cout << " minimalna liczba to: " << min << " a maksymalna to: " << max;*/
+/*zadanie4
+	float n;
+	int a;
+	float tab[10];
+	float srednia = 0;
+	int min;
+	int max;
+	cout << "ile liczb chcesz podac? ", cin >> a;
+	for (int i = 0; i < a; i++) {
+		cout << "podaj liczbe z zakresu od 0 do 10: ", cin >> n;
+		tab[i] = n;
+	}
+	if (a < 10) {
+		for (int j=a; j < 10; j++) {
+			tab[j] = 0;
+		}
+		
+	}
+	for (int i = 0; i < 10; i++) {
+		cout << tab[i] << " ";
+	}
+	min = tab[0];
+	max = tab[0];
+	for (int i = 0; i < 10; i++) {
+		srednia = srednia + tab[i];
+		if (tab[i] > max) {
+			max = tab[i];
+		}
+		if (tab[i] < min) {
+			min = tab[i];
+		}
+	}
+	cout << " twoja srednia to: " << srednia / 10 << " minimalna liczba to: " << min << " a maksymalna to: " << max;*/
+/*zadanie5
+	int tab[10];
+	srand(time(NULL));
+	for (int i = 0; i < 10; i++) {
+		tab[i] = (rand() % 10)+1;
+	}
+	int los = (rand() % 10)+1;
+	int suma = 0;
+	for(int i = 0; i < 10; i++) {
+		if (tab[i] == los) {
+			suma++;
+		}
+	}
+	cout <<"twoj szczesliwy numerek: "<<los << "\nile razy sie pojawil: " << suma;*/
+/*zadanie6*/
+int tab2[2][2] = { 0 };
+int tab[2][2] = {{0,0},{0,0}};
+int suma[2][2] = { 0 };
+for (int i = 0; i < 2; i++) {
+	for (int j = 0; j < 2; j++) {
+		cout << "\npodaj liczbe: ", cin >> tab[i][j];
+	}
+}
+for (int i = 0; i < 2; i++) {
+	for (int j = 0; j < 2; j++) {
+		cout << "\npodaj liczbe: ", cin >> tab2[i][j];
+	}
+}
+for (int k; k < 4; k++) {
+	for (int i = 0; i < 2; i++) {
+		for(int j=0;j<2;j++){
+			suma[i][j] = tab[i][j] + tab2[i][j];
+	}
+}
+	for(int i=0;i<2;i++){
+		for (int j = 0; j < 2; j++) {
+			cout << tab[i][j]
+		}
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
