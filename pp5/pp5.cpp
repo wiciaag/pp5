@@ -215,5 +215,30 @@ for (int i = 0;i < 8;i++) {
 }
 cout << "suma wszystkich elementow macierzy to: " << suma << endl;*/
 /*zadanie11*/
-
+	int tab[8][6] = { { 1,2,3,4,5,6 },
+	{ 1, 2, 3, 4, 5, 6 },{ 1, 2, 3, 4, 5, 6 },{ 1, 2, 3, 4, 5, 6 },
+	{ 1, 2, 3, 4, 5, 6 },{ 1, 2, 3, 4, 5, 6 },{ 1,2,3,4,5,6 },{1,2,3,4,5,6}
+};
+int min = tab[0][0];
+int max =tab[0][0];
+int pierwszamin=0;
+int drugamin=0;
+int pierwszamax = 0;
+int drugamax = 0;
+for (int i = 1;i < 10;i++) {
+	for (int j=1;j < 10;j++) {
+		if (tab[i][j] > max) {
+			max = tab[i][j];
+			pierwszamax = i;
+			drugamax = j;
+		}
+		if (tab[i][j] < min) {
+			min = tab[i][j];
+			pierwszamin = i;
+			drugamin = j;
+		}
+	}
+}
+cout << "twoja minimalna to: " << min << " a jej wspolrzedne to: (" << pierwszamin << "," << drugamin << ")" << endl;
+cout << "twoja maksymalna to: " << max << " a jej wspolrzedne to: (" << pierwszamax << "," << drugamax << ")" << endl;
 }
