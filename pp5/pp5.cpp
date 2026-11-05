@@ -319,6 +319,40 @@ for (int i = 0; i < 2; i++) {
 		cout << "twoja macierz nie jest jednostkowa";
 	}*/
 /*zadanie17*/
+int tab[8][6];
+int sumaw = 0;
+int sumak = 0;
+int numerk = 0;
+int numerw = 0;
+int najwiersz = tab[0][0];
+int najkolumna = tab[0][0];
+for (int i = 0;i < 8;i++) {
+	for (int j = 0;j < 6;j++) {
+		cout << "podaj element macierzy: ", cin >> tab[i][j];
+	}
+}
+for (int i = 0;i < 8;i++) {
+	for (int j = 0;j < 6;j++) {
+		sumaw = sumaw + tab[i][j];
 
+	}
+	cout << "suma elementow " << i + 1 << " wiersza wynosi: " << sumaw << "\n";
+	if (sumaw > najwiersz) {
+		numerw = i+1;
+	}
+
+}
+for (int i = 0;i < 8;i++) {
+	for (int j = 0;j < 6;j++) {
+		sumak = sumak + tab[j][i];
+
+	}
+	cout << "suma elementow " << i + 1 << " kolumny wynosi: " << sumak << "\n";
+	if (sumak > najkolumna) {
+		numerk = i+1;
+	}
+}
+cout << "najwieksza suma elementow w wierszu znajduje sie w wierszu nr: " << numerw << "\n";
+cout << "najwieksza suma elementow w kolumnie znajduje sie w kolumnie nr: " << numerk << "\n";
 }
 		
